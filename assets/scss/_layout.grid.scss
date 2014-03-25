@@ -1,0 +1,70 @@
+
+/* Grid logic
+---------------------------------------*/
+@for $i from 1 through $gridSize {
+	//Pixel grid + Procent grid
+	.l-grid-#{$i},
+	.l-grid-fit-#{$i} {
+		@include clearfix();
+		$width: $colomnWidth * $i;
+		float: left;
+		width: $width;
+		&.l-grid-spaceleft {
+			padding-left: $gridSpacing;
+		}
+		&.l-grid-spaceright {
+			padding-right: $gridSpacing / 2;
+			&:only-child {
+				padding-right: $gridSpacing;
+			}
+			& + [class^=l-grid] {
+				padding-left: $gridSpacing / 2;
+				&:not(:last-child) {
+					padding-left: $gridSpacing/4;
+					padding-right: $gridSpacing/4;
+				}
+			}
+		}
+	}
+	//Procent grid
+	.l-grid-fit-#{$i} {
+		width: 100% / $gridSize * $i;
+	}
+}
+.l-grid-fit {
+	overflow: hidden;
+}
+.l-grid-innerContent {
+	@include clearfix();
+	background-color: #fff;
+	height: 100%;
+	width: 100%;
+	padding: $gridSpacing;
+	.grid-innerContent-outset {
+		margin-left: -$gridSpacing;
+		margin-right: -$gridSpacing;
+		margin-top: -$gridSpacing;
+	}
+}
+.l-grid-fit-img {
+	width: 100%;
+	clear: both;
+	img {
+		width: 100%;
+		display: block;
+		height: auto;
+	}
+}
+.l-grid-wrapper {
+	@include clearfix();
+	width: 100%;
+	position: relative;
+	min-width: $contentWidth + ($gridSpacing * 4);
+	.l-grid-cc {
+		@include clearfix();
+		width: $contentWidth + ($gridSpacing * 2);
+		height: 100%;
+		margin: 0 auto;
+		position: relative;
+	}
+}

@@ -1,0 +1,55 @@
+/* Modules */
+
+.paper {
+	padding: 0;
+	position: relative;
+	display: block;
+	background-color: #fff;
+	background: url(../img/paper/paper1.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	width: 181px;
+	height: 37px;
+	vertical-align: middle;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	//text-shadow: -1px -1px 2px #000, -2px -2px #fff;
+	&.paper-tiny {
+		background: url(../img/paper/paper5.png);
+		width: 96px;
+	}
+	&.paper-small {
+		background: url(../img/paper/paper4.png);
+		width: 105px;
+	}
+	&.paper-medium {
+		background: url(../img/paper/paper2.png);
+		width: 147px;
+	}
+	&.paper-large {
+		background: url(../img/paper/paper1.png);
+		width: 181px;
+	}
+	&.paper-huge {
+		background: url(../img/paper/paper3.png);
+		width: 183px;
+	}
+	.paper-text {
+		font-size: 17px;
+		line-height: 17px;
+		margin-top: 5px;
+
+		/*
+		background-color: rgba(0,0,0,0.7);
+		color: transparent;
+		text-shadow: 2px 2px 1px $mainBackgroundColor;
+		-webkit-background-clip: text;
+		-moz-background-clip: text;
+		background-clip: text;
+		*/
+	}
+	&:hover,
+	&.active {
+		background-position: center bottom;
+	}
+}

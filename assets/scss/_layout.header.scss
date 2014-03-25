@@ -1,0 +1,60 @@
+/* Layouts */
+
+.l-header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 40;
+	.l-header-nav {
+		@include clearfix();
+		ul {
+			@include clearfix();
+			@include resetBox();
+			width: 100%;
+			list-style: none;
+			display: block;
+			float: left;
+			text-align: center;
+			li {
+				@include resetBox();
+				display: inline-block;
+				margin: 5px 10px 0 0;
+				a {
+					display: block;
+					//color: $primNavColor;
+					font-family: $navFont;
+					font-weight: bold;
+					//padding: 10px 0;
+				}
+			}
+		}
+	}
+	.l-header-sound {
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		width: 46px;
+		height: 37px;
+		background-image: url(../img/music_paper.png);
+		background-repeat: no-repeat;
+		background-position: left top;
+		cursor: pointer;
+		.l-header-soundIcon {
+			width: 22px;
+			height: 22px;
+			background-image: url(../img/music_icon.png);
+			background-repeat: no-repeat;
+			background-position: left top;
+			overflow: hidden;
+			position: relative;
+			left: (46px - 22px) / 2;
+			top: (37px - 22px) / 2 - 1;
+		}
+		&.mute {
+			.l-header-soundIcon {
+				background-position: left bottom;
+			}
+		}
+	}
+}

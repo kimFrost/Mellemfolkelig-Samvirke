@@ -1,0 +1,143 @@
+/* Layouts */
+
+.l-panorama {
+	@include fill();
+	.l-panorama-hotspot {
+		opacity: 1 !important;
+		background-color: transparent !important;
+		text-indent: 0 !important;
+		overflow: visible !important;
+		//height: 46px !important;
+		//background-color: red !important;
+		&.l-panorama-debug {
+			background-color: red !important;
+		}
+		.l-panorama-hotspotContent {
+			display: block;
+			position: relative;
+			background: none;
+			width: auto;
+			height: 46px;
+			
+			width: 0;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			float: left;
+
+			min-width: 15px + 46px;
+
+			-webkit-transition: all 300ms ease;
+			-moz-transition: all 300ms ease;
+	        -ms-transition: all 300ms ease;
+	        -o-transition: all 300ms ease;
+			transition: all 300ms ease;
+
+			.l-panorama-hotspotLeft {
+				background-image: url(../img/hotspot/left_side_icon.png);
+				background-repeat: no-repeat;
+				width: 46px;
+				height: 46px;
+				float: left;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.l-panorama-hotspotRight {
+				background-image: url(../img/hotspot/right_side.png);
+				background-repeat: no-repeat;
+				width: 15px;
+				height: 46px;
+				float: left;
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+
+			//padding-top: 14px;
+			//line-height: 46px;
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				left: 46px;
+				right: 15px;
+				top: 0;
+				bottom: 0;
+				background-image: url(../img/hotspot/mid_side.png);
+				background-repeat: repeat-x;
+				z-index: 1;
+			}
+			.l-panorama-hotspotInnerContent {
+				@include clearfix();
+				text-align: left;
+				position: absolute;
+				//min-width: 9000px;
+				color: #000;
+				font-family: $headlineFont;
+				font-size: 16px;
+				line-height: 16px;
+				z-index: 2;
+				margin-left: 46px + 15px + 10px;
+
+				overflow: hidden;
+				text-overflow: hidden;
+
+				-webkit-transition: all 300ms ease;
+				-moz-transition: all 300ms ease;
+		        -ms-transition: all 300ms ease;
+		        -o-transition: all 300ms ease;
+				transition: all 300ms ease;
+
+				.l-panorama-hotspotComment {
+					display: block;
+					float: left;
+					clear: both;
+					font-size: 10px;
+					line-height: 10px;
+				}
+				.l-panorama-hotspotLine1,
+				.l-panorama-hotspotLine2 {
+					display: block;
+					float: left;
+					clear: both;
+					font-size: 14px;
+					min-width: 1000px;
+					line-height: 14px;
+					overflow: hidden;
+					text-overflow: hidden;
+				}
+				.l-panorama-hotspotLine1 {
+					
+				}
+				.l-panorama-hotspotLine2 {
+					
+				}
+			}
+		}
+		&.active,
+		&:hover {
+			.l-panorama-hotspotContent {
+				width: 100%;
+				//padding-left: 10px;
+				//padding-right: 10px;
+				.l-panorama-hotspotInnerContent {
+					margin-left: 46px;
+				}
+			}
+		}
+		&:hover {
+
+		}
+		&.active {
+
+		}
+		&.active {
+			.l-panorama-hotspotContent {
+				
+			}
+		}
+	}
+}
+.l-panorama-lightbox {
+	display: none;
+}

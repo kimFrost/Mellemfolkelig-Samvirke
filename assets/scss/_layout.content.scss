@@ -1,0 +1,117 @@
+/* Layouts */
+
+.l-content {
+	display: none;
+	@include fill();
+	top: $headerHeight;
+	bottom: $footerHeight;
+	z-index: 60;
+	left: 50%;
+	margin-left: -(($contentWidth + ($gridSpacing * 2))/2);
+	right: auto;
+	background-image: url(../img/side_page.png);
+	background-repeat: repeat-y;
+	background-position: left top;
+	.l-content-close {
+		background-image: url(../img/content_close.png);
+		background-repeat: no-repeat;
+		position: absolute;
+		top: 25px;
+		right: 0;
+		width: 29px;
+		height: 30px;
+		cursor: pointer;
+	}
+	&,p {
+		//font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-family:  "Helvetica","Arial","sans-serif";
+   		font-weight: 300;
+   		font-size: 12px;
+   		line-height: 16px;
+   		color: #231f20;
+   		text-align: justify;
+	}
+	h1,h2,h3,h4 {
+		font-family: $headlineFont;
+		font-weight: normal;
+		margin-top: 0;
+		padding-top: 0;
+		//font-size: 16px;
+		//line-height: 16px;
+	}
+	.l-content-innerContent {
+		@include clearfix();
+		position: absolute;
+		top: $gridSpacing;
+		right: $gridSpacing;
+		bottom: $gridSpacing;
+		left: $gridSpacing;
+		//padding: $gridSpacing;
+		//overflow: hidden;
+		.l-content-nav {
+			background-image: url(../img/content_nav.png);
+			background-repeat: no-repeat;
+			position: absolute;
+			float: left;
+			clear: both;
+			height: $contentNavHeight;
+			top: 0;
+			overflow: hidden;
+			padding: 15px;
+			h1,h2,h3,h4 {
+				margin: 0;
+				padding: 0;
+				margin-bottom: 5px;
+			}
+			ul {
+				@include clearfix();
+				display: block;
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				li {
+					display: block;
+					padding: 0;
+					float: left;
+					margin-right: 25px;
+					a {
+						display: block;
+						font-family:  "Helvetica","Arial","sans-serif";
+					}
+				}
+			}
+		}
+		.l-content-scroll {
+			@include clearfix();
+			position: absolute;
+			float: left;
+			clear: both;
+			top: $contentNavHeight;
+			bottom: 0;
+			margin-top: 20px;
+		}
+		.mCSB_container {
+			margin-right: 18px;
+		}
+
+
+		//Test
+		/*
+		div[class^=l-grid-] {
+			background-color: #888;
+			//border: 1px solid #555;
+			p {
+				background-color: #000;
+				color: #fff;
+			}
+		}
+		*/
+	}
+}
+.l-content-veil {
+	@include fill();
+	position: fixed;
+	display: none;
+	background-color: rgba(0,0,0,0.6);
+	z-index: 50;
+}

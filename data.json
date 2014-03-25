@@ -1,0 +1,105 @@
+{
+	"width": 19844,
+	"height": 1626,
+	"startPos": 0,
+	"showControls": true,
+	"hotspots": [
+		{
+			"comment": "video:",
+			"line1": "Barnets dag",
+			"line2": "i sundhedscentret",
+			"link": "#gallery01", 
+			"width": 500,
+			"height": 250,
+			"xPos": 1200,
+			"yPos": 600,
+			"debug": false
+		},
+		{
+			"comment": "",
+			"line1": "Barnets dag",
+			"line2": "",
+			"link": "#sundhed", 
+			"width": 450,
+			"height": 600,
+			"xPos": 500,
+			"yPos": 200,
+			"debug": false
+		},
+		{
+			"comment": "",
+			"line1": "Barnets dag",
+			"line2": "",
+			"link": "#kvinders_rettigheder",
+			"width": 600,
+			"height": 200,
+			"xPos": 1300,
+			"yPos": 950,
+			"debug": false
+		},
+		{
+			"comment": "",
+			"line1": "Ext link",
+			"line2": "",
+			"link": "http://google.dk",
+			"target": "_blank",
+			"width": 300,
+			"height": 200,
+			"xPos": 1600,
+			"yPos": 150,
+			"debug": false
+		},
+		{
+			"comment": "Galleri:",
+			"line1": "Link til et",
+			"line2": "galleri",
+			"link": "#gallery02",
+			"width": 500,
+			"height": 400,
+			"xPos": 2500,
+			"yPos": 600,
+			"debug": false
+		}
+	],
+	"pages": [
+		{
+			"title": "Skole",
+			"id": "skole",
+			"template": "template.page.html",
+			"hidden": true
+		},
+		{
+			"title": "Sundhed",
+			"id": "sundhed",
+			"template": "template.page.sundhed.html",
+			"hidden": true
+		},
+		{
+			"title": "Kvinders rettigheder",
+			"id": "kvinders_rettigheder",
+			"template": "template.page.html"
+		},
+		{
+			"title": "Din hjælp nytter",
+			"id": "din_hjaelp_nytter",
+			"template": "template.page.html"
+		},
+		{
+			"title": "Bliv landsbysponsor",
+			"id": "bliv_landsbysponsor",
+			"template": "template.page.html"
+		}
+	],
+	"lightboxes": [
+		{
+			"title": "Galleri 01",
+			"id": "gallery01",
+			"template": "template.youtube.temp.html"
+		},
+		{
+			"title": "Galleri 02",
+			"id": "gallery02",
+			"template": "template.gallery.temp.html"
+		}
+	]
+}

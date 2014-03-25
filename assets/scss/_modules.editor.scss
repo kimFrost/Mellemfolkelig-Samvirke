@@ -1,0 +1,133 @@
+/* Modules */
+
+.editor {
+	.editor-quot {
+		width: auto;
+		display: inline-block;
+		font-family: $headlineFont;
+		clear: both;
+		background-color: #ee1727;
+		padding: 2px;
+		color: #fff;
+		position: relative;
+		margin-top: 35px;
+		margin-bottom: 35px;
+		font-weight: normal;
+		font-size: 13px;
+		line-height: 13px;
+		&:before {
+			content: "\201C";
+			display: block;
+			font-size: 24px;
+			line-height: 24px;
+			height: 24px;
+			font-family: $headlineFont;
+			clear: both;
+			color: #251f21;
+			position: absolute;
+			top: -19px;
+		}
+		&:after {
+			//content: "\201E";
+			content: "\201D";
+			display: block;
+			font-size: 24px;
+			line-height: 24px;
+			height: 24px;
+			font-family: $headlineFont;
+			clear: both;
+			color: #251f21;
+			position: absolute;
+			bottom: -27px;
+		}
+	}
+	.editor-box {
+		width: 98%;
+		margin: 0 1%;
+		padding: 20px;
+		//background-color: #efeff1;
+		background-image: url(../img/editor_box.png);
+		background-repeat: repeat;
+		background-position: left top;
+		border-top: 1px solid #f5f5f5;
+		border-bottom: 1px solid #dedede;
+		-webkit-box-shadow:  0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+        box-shadow:  0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+        ul {
+        	margin: 0;
+        	padding: 0 0 0 20px;
+        	li {
+        		margin-bottom: 10px;
+        		//font-weight: bold;
+        		&:nth-child(odd) {
+        			
+        		}
+        		&:nth-child(even) {
+        			
+        		}
+        	}
+        }
+	}
+	.editor-line {
+		width: 100%;
+		padding: 10px 0 10px 0;
+		margin: 20px 0;
+		background-image: url(../img/editor_line.png);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: contain;
+		overflow: hidden;
+		
+	}
+	.editor-center {
+		text-align: center;
+		width: 100%;
+	}
+	.editor-left {
+		text-align: left;
+		width: 100%;
+	}
+	.editor-right {
+		text-align: right;
+		width: 100%;
+	}
+	.editor-paper {
+		position: relative;
+		display: inline-block;
+		height: 46px;
+		line-height: 46px;
+		font-family: $headlineFont;
+		font-weight: normal;
+		font-size: 18px;
+		text-align: center;
+		background-image: url(../img/hotspot/mid_side.png);
+		background-repeat: repeat-x;
+		background-position: left center;
+		left: 18px;
+		padding-right: 5px;
+		padding-left: 2px;
+		&:before {
+			content: "";
+			display: inline-block;
+			background-image: url(../img/hotspot/left_side.png);
+			background-repeat: no-repeat;
+			width: 18px;
+			height: 46px;
+			position: absolute;
+			left: -18px;
+			top: 0;
+		}
+		&:after {
+			content: "";
+			display: inline-block;
+			background-image: url(../img/hotspot/right_side.png);
+			background-repeat: no-repeat;
+			width: 15px;
+			height: 46px;
+			position: absolute;
+			right: -15px;
+			top: 0;
+		}
+	}
+}
+

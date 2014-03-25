@@ -1,0 +1,26 @@
+//Grid variables
+$contentWidth: 960px;
+$gridSize: 12;
+$gridSpacing: 20px;
+$colomnWidth: $contentWidth / $gridSize;
+
+$mainBackgroundColor: #b3c8d8;
+$primNavColor: #b3c8d8;
+
+$headerHeight: 100px;
+$footerHeight: 100px;
+$contentNavHeight: 70px;
+
+$contentFont: "Helvetica", "Arial", Sans-serif;
+$navFont: "Myriad Pro", "Arial", Sans-serif;
+$headlineFont: "AmericanTypwrterITCW01- 731010";
+
+
+/*
+font-family:'AmericanTypwrterITCW01- 731031';
+font-family:'AmericanTypwrterITCW01- 731034';
+font-family:'AmericanTypwrterITCW01- 731010'; <--
+font-family:'AmericanTypwrterITCW01- 731013';
+font-family:'AmericanTypwrterITCW01- 731022';
+font-family:'AmericanTypwrterITCW01- 731016';
+*/

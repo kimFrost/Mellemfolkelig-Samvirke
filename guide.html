@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Guide</title>
+	<style type="text/css">
+		h2 {
+			margin-top: 0;
+		}
+		table {
+			margin-bottom: 20px;
+			width: 100%;
+		}
+		tr {
+
+		}
+		th {
+			text-align: left;
+			font-size: 20px;
+		}
+		td {
+			background-color: #000;
+			color: #fff;
+			padding: 10px 20px 10px 10px;
+			text-align: left;
+			font-size: 16px;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		tr:nth-child(odd) td {
+			background-color: #333;
+		}
+		.fokus {
+			color: #FF4D4D;
+		}
+		.desc {
+			font-size: 14px;
+		}
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		li {
+			padding: 0;
+			margin: 0;
+			display: block;
+			position: relative;
+			left: 20px;
+		}
+		tr td.tdHeader {
+			background-color: #777;
+		}
+
+
+	</style>
+</head>
+<body>
+	
+	<h1>Guide</h1>
+
+	<h2>Modal grid</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Navn</th>
+				<th>Syntax</th>
+				<th>Eksempel</th>
+				<th>Beskrivelse</th>
+			</tr>	
+		</thead>
+		<tbody>
+			<tr>
+				<td>Modal navigations området</td>
+				<td>.l-content-nav</td>
+				<td>&#60;div class="l-content-nav">Navigation&#60;/div></td>
+				<td class="desc">I navigation lyttes der efter klik på a tags, hvorefter der ledes efter det id, som a taget linker til.</td>
+			</tr>
+			<tr>
+				<td>Modal indholds området</td>
+				<td>.l-content-scroll</td>
+				<td>&#60;div class="l-content-scroll">Indhold&#60;/div></td>
+				<td class="desc">Her bliver indholdet henter ind, samt scrollbaren omklamrer denne kasse.</td>
+			</tr>
+			<tr>
+				<td>Struktur</td>
+				<td>.l-grid-(<span class="fokus">1-12</span>)</td>
+				<td>&#60;div class="l-grid-6">Indhold&#60;/div></td>
+				<td class="desc">Disse definerer bredden på en kasse. Indholdet er målt op i et 12 punkts grid. Den totale brede er 960px, og en .l-grid-6 vil derfor være 480px bred. Alle tal fra 1 til 12 kan anvendes, og 12 er derfor 960px og 1 er 80px.</td>
+			</tr>
+			<tr>
+				<td>Mellemrum på stuktur</td>
+				<td>.l-grid-spaceright / .l-grid-spaceleft</td>
+				<td>&#60;div class="l-grid-6 l-grid-spaceright">Indhold&#60;/div></td>
+				<td class="desc">Denne class kan bruges sammen med en struktur class, for at skabe luft imellem indholdet. Mellemrumet vil være 20px, hvor dette vil blive fratrukket i bredden på de to rørende kasser. Disse vil hver blive 10px mindre i bredden.</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>Modal indhold</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Navn</th>
+				<th>Syntax</th>
+				<th>Eksempel</th>
+				<th>Beskrivelse</th>
+			</tr>	
+		</thead>
+		<tbody>
+			<tr>
+				<td>Modal cross link</td>
+				<td>$page#<span class="fokus">ModalID</span></td>
+				<td>&#60;a href="$page#sundhed">Tekstindhold&#60;/a></td>
+				<td class="desc">Kan bruges i et modal indhold, således at et modal kan indeholde et link, som linker til et andet modal</td>
+			</tr>
+			<tr>
+				<td>Citat styling</td>
+				<td>.editor-quot</td>
+				<td>&#60;div class="editor-quot">Indhold&#60;/div></td>
+				<td class="desc">Et citat vil altid være 100% bred.</td>
+			</tr>
+			<tr>
+				<td>Box styling</td>
+				<td>.editor-box</td>
+				<td>&#60;div class="editor-box">Indhold&#60;/div></td>
+				<td class="desc">Boksen vil tilpasse sig bredden af den kasse den ligger i.</td>
+			</tr>
+			<tr>
+				<td>Separerings linie</td>
+				<td>.editor-line</td>
+				<td>&#60;div class="editor-line">Indhold&#60;/div></td>
+				<td class="desc">Linien vil altid være 100% bred, så den passer til det indhold den bruges i.</td>
+			</tr>
+			<tr>
+				<td>Papir styling</td>
+				<td>.editor-paper</td>
+				<td>&#60;div class="editor-paper">Indhold&#60;/div></td>
+				<td class="desc">Vil style kassen som et stykke papir. Kassen vil tilpasse sig i bredden efter sit indhold.</td>
+			</tr>
+			<tr>
+				<td>Venstrestil indhold</td>
+				<td>.editor-left</td>
+				<td>&#60;div class="editor-left">Indhold&#60;/div></td>
+				<td class="desc">Vil venstrestille sit indhold</td>
+			</tr>
+			<tr>
+				<td>Midterstil indhold</td>
+				<td>.editor-center</td>
+				<td>&#60;div class="editor-center">Indhold&#60;/div></td>
+				<td class="desc">Vil centrere sit indhold</td>
+			</tr>
+			<tr>
+				<td>Højrestil indhold</td>
+				<td>.editor-right</td>
+				<td>&#60;div class="editor-right">Indhold&#60;/div></td>
+				<td class="desc">Vil højrestille sit indhold</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>Data.json</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Navn</th>
+				<th>Syntax</th>
+				<th>Eksempel</th>
+				<th>Beskrivelse</th>
+			</tr>	
+		</thead>
+		<tbody>
+			<tr>
+				<td>Bredde på 360 billede</td>
+				<td>width</td>
+				<td>"width": 19844</td>
+				<td class="desc"></td>
+			</tr>
+			<tr>
+				<td>Højde på 360 billede</td>
+				<td>height</td>
+				<td>"height": 1626</td>
+				<td class="desc"></td>
+			</tr>
+			<tr>
+				<td>Start position af 360 billede</td>
+				<td>startPos</td>
+				<td>"startPos": 0</td>
+				<td class="desc"></td>
+			</tr>
+			<tr>
+				<td>Hvis pile på 360 billede</td>
+				<td>showControls</td>
+				<td>"showControls": true</td>
+				<td class="desc"></td>
+			</tr>
+			<tr>
+				<td colspan="4" class="tdHeader">Hotspots</td>
+			</tr>
+			<tr>
+				<td>Kommentarfelt</td>
+				<td>"comment"</td>
+				<td>"comment": "video:"</td>
+				<td class="desc"></td>
+			</tr>
+			<tr>
+				<td>Linie 1 felt</td>
+				<td>"line1"</td>
+				<td>"line1": "Barnets dag"</td>
+				<td class="desc"></td>
+			</tr>
+			<tr>
+				<td>Linie 2 felt</td>
+				<td>"line2"</td>
+				<td>"line2": "i sundhedscentret"</td>
+				<td class="desc"></td>
+			</tr>
+			<tr>
+				<td>Link til id eller http</td>
+				<td>"link"</td>
+				<td>"link": "#gallery01"</td>
+				<td class="desc"></td>
+			</tr>
+			<tr>
+				<td>Target</td>
+				<td>"target"</td>
+				<td>"target": "_blank"</td>
+				<td class="desc"></td>
+			</tr>
+			<tr>
+				<td>Bredde på hotspot</td>
+				<td>"width"</td>
+				<td>"width": 500</td>
+				<td class="desc"></td>
+			</tr>
+			<tr>
+				<td>Højde på hotspot</td>
+				<td>"height"</td>
+				<td>"height": 250</td>
+				<td class="desc"></td>
+			</tr>
+			<tr>
+				<td>X kordinat på hotspot</td>
+				<td>"xPos"</td>
+				<td>"xPos": 1200</td>
+				<td class="desc"></td>
+			</tr>
+			<tr>
+				<td>Y kordinat på hotspot</td>
+				<td>"yPos"</td>
+				<td>"yPos": 600</td>
+				<td class="desc"></td>
+			</tr>
+			<tr>
+				<td>Marker hotspot med rød baggrund</td>
+				<td>"debug"</td>
+				<td>"debug": false</td>
+				<td class="desc"></td>
+			</tr>
+			<tr>
+				<td colspan="4" class="tdHeader">Pages</td>
+			</tr>
+			<tr>
+				<td>Titel</td>
+				<td>"title"</td>
+				<td>"title": "Skole"</td>
+				<td class="desc"></td>
+			</tr>
+			<tr>
+				<td>ID</td>
+				<td>"id"</td>
+				<td>"id": "skole"</td>
+				<td class="desc"></td>
+			</tr>
+			<tr>
+				<td>Html indhold</td>
+				<td>"template"</td>
+				<td>"template": "template.page.skole.html"</td>
+				<td class="desc"></td>
+			</tr>
+			<tr>
+				<td>Gem i navigationen</td>
+				<td>"hidden"</td>
+				<td>"hidden": true</td>
+				<td class="desc"></td>
+			</tr>
+			<tr>
+				<td>Link til http</td>
+				<td>"link"</td>
+				<td>"link": "http://google.dk"</td>
+				<td class="desc"></td>
+			</tr>
+			<tr>
+				<td>Target</td>
+				<td>"target"</td>
+				<td>"target": "_blank"</td>
+				<td class="desc"></td>
+			</tr>
+			<tr>
+				<td colspan="4" class="tdHeader">Lightboxes</td>
+			</tr>
+			<tr>
+				<td>Titel</td>
+				<td>"title"</td>
+				<td>"title": "Galleri 01"</td>
+				<td class="desc"></td>
+			</tr>
+			<tr>
+				<td>ID</td>
+				<td>"id"</td>
+				<td>"id": "gallery01"</td>
+				<td class="desc"></td>
+			</tr>
+			<tr>
+				<td>Html indhold</td>
+				<td>"template"</td>
+				<td>"template": "template.youtube.temp.html</td>
+				<td class="desc"></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>Data.json ex.</h2>
+
+	<ul>
+		<li>{</li>
+		<li>"width": 19844,</li>
+		<li>"height": 1626,</li>
+		<li>"startPos": 0,</li>
+		<li>"showControls": true,</li>
+		<li>"hotspots": [</li>
+		<li><ul>
+			<li>{</li>
+			<li>"comment": "video:",</li>
+			<li>"line1": "Barnets dag",</li>
+			<li>"line2": "i sundhedscentret",</li>
+			<li>"link": "#skole", </li>
+			<li>"width": 500,</li>
+			<li>"height": 250,</li>
+			<li>"xPos": 1200,</li>
+			<li>"yPos": 600,</li>
+			<li>"debug": false</li>
+			<li>},</li>
+			<li>{</li>
+			<li>"comment": "video:",</li>
+			<li>"line1": "Barnets dag",</li>
+			<li>"line2": "i sundhedscentret",</li>
+			<li>"link": "#gallery01", </li>
+			<li>"width": 500,</li>
+			<li>"height": 250,</li>
+			<li>"xPos": 1200,</li>
+			<li>"yPos": 600,</li>
+			<li>"debug": false</li>
+			<li>}</li>
+		</ul></li>
+		<li>],</li>
+		<li>"pages": [</li>
+		<li><ul>
+			<li>{</li>
+			<li>"title": "Skole",</li>
+			<li>"id": "skole",</li>
+			<li>"template": "template.page.skole.html",</li>
+			<li>"hidden": false</li>
+			<li>},</li>
+			<li>{</li>
+			<li>"title": "Sundhed",</li>
+			<li>"id": "sundhed",</li>
+			<li>"template": "template.page.sundhed.html",</li>
+			<li>"hidden": false</li>
+			<li>}</li>
+		</ul></li>
+		<li>],</li>
+		<li>"lightboxes": [</li>
+		<li><ul>
+			<li>{</li>
+			<li>"title": "Galleri 01",</li>
+			<li>"id": "gallery01",</li>
+			<li>"template": "template.youtube.temp.html"</li>
+			<li>}</li>
+		</ul></li>
+		<li>]</li>
+		<li>}</li>
+	</ul>
+
+
+</body>
+</html>

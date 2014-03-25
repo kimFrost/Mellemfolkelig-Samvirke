@@ -1,0 +1,19 @@
+/* Layouts */
+
+.l-footer {
+	position: fixed;
+	right: 0px;
+	bottom: 0px;
+	left: 200px;
+	z-index: 60;
+	width: auto !important;
+	min-width: 0 !important;
+	.l-footer-logo {
+		float: right;
+		margin-right: 20px;
+		margin-bottom: 20px;
+		a, img {
+			display: block;
+		}
+	}
+}

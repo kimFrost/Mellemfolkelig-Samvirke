@@ -1,0 +1,9 @@
+/* Layouts */
+
+.l-master {
+	@include fill();
+	min-height: 600px;
+	overflow: hidden;
+	background-color: $mainBackgroundColor;
+	min-width: 1150px;
+}
